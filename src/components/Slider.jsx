@@ -90,17 +90,18 @@ const Slider = () => {
         <Arrow direction ="left" onClick ={()=>handleClick("left")}>
             <ArrowLeftOutlinedIcon />
         </Arrow>
-        <Wrapper slideIndex = {slideIndex}>{sliderItems.map(item=>(
-            <Slide bg ={item.bg}>
-            <ImgContainer>
-                <Image src = {item.img} />
-            </ImgContainer>
-            <InfoContainer>
-                <Title>{item.title}</Title>
-                <Desc>{item.desc}</Desc>
-                <Button>SHOP NOW</Button>
-            </InfoContainer>
-            </Slide>
+        <Wrapper slideIndex = {slideIndex}>
+            {sliderItems.map(item=>(
+                <Slide bg ={item.bg}>
+                <ImgContainer>
+                    <Image src = {item.img} />
+                </ImgContainer>
+                <InfoContainer>
+                    <Title>{item.title}</Title>
+                    <Desc>{item.desc}</Desc>
+                    <Button>SHOP NOW</Button>
+                </InfoContainer>
+                </Slide>
         ))}
             
         </Wrapper>
